@@ -2,12 +2,18 @@
 <html>
 	<head>
 		<title>Orsys Exo</title>
+		<!-- build:css -->
+		<link target="vendors" rel="stylesheet" href="../bower_components/angular/angular-csp.css" />
+		<link target="app" rel="stylesheet" href="style.css" />
+		<!-- endbuild -->
 	</head>
 	<body ng-app="mainApp">
 		<ors-header></ors-header>
 		<ors-body></ors-body>
 		<ors-footer></ors-footer>
-		<script src="../bower_components/angular/angular.js"></script>
-		<script src="app.js"></script>
+		<!-- build:js -->
+		<script target="vendors" src="../bower_components/angular/angular.js"></script>
+		<script target="app" src="app.js"></script>
+		<!-- endbuild -->
 	</body>
 </html>
