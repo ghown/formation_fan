@@ -68,3 +68,8 @@ var app = angular.module('myApp', []); le []permet de créer le module. Si on l'e
 
 On charge auto, puis "myApp" puis le module (Exemple 04).
 Transclude affiche le contenu de ce que contenait la directive.
+
+3 manières d'appeler une directive 
+Façon attribut
+Façon élément
+Façon classe
