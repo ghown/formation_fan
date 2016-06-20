@@ -1,0 +1,70 @@
+NPM = Node Package Manager : Programmation modulaire, possibilité de récupérer des packages d'autres personnes.
+
+Json = Fichier clé/valeur => "blabla" : "blublu" /OU\ "blabla" : { "blibli" : "blublu", "bloblo" : "bleble" }
+
+Quand on installe avec bower, l'option -S permet de mettre les dépendances dans bower.json et figer la version : -E. -D => DevDependencies au lieu de Dependencies.
+Possibilité de trouver la doc officielle sur doc.npmjs.com et Bower : bower.io/docs/api/install
+
+jshintrc => Hinter, comme Sonar
+jscsrc 	 => Format Styler
+
+Toujours appeler le tag <script> juste avant la balise fermante </body>.
+=> Vieux navigateurs, et permet d'afficher la page avant de s'occuper du js.
+IE8 => Angular 1.2 + Script en fin de body.
+
+IIFE : Immediatly Invoked Function Expression. Lancer une fonction dès qu'elle est finie de déclarer.
+Tout mettre dans une fct permet de ne pas avoir de variable globale et de conflits.
+Permet d'isoler les parties de codes entre elles.
+
+On peut passer des instruction à jshint par le biais d'un commentaire de la forme : /* jshint -W003, -W038 */. Par exemple, ici, on demande à JSHint de ne pas afficher les warnings 003 et 038.
+'use strict'; => Mode strict interdisant certaines construction (ex : on ne peut pas utiliser une variable que l'on a pas déclarer).
+Spécifications officiels js : ECMA script.
+
+Javascript : Une ligne ne peut pas mettre plus d'un certain temps à s'éxecuter (asynchrone).
+Pas de threads. (Apache décline en prod' car multithread). Remplacé par : jenkins, divise les coûts de production par 10.
+BOM = Brower object model. Console est un BOM. Taper this dans console de dév donne les commandes possibles.
+
+=== => Egale en type et en valeur. == => Egale en valeur.
+
+Pour avoir une variable globale : window.variable = blabla.
+Méthode avec this dedans => Constructeur.
+
+var Animal = function() {									####	Permet de déclarer une classe, mettre des majuscules aux classes.
+		this.eat = function() {								####	Permet d'ajouter une méthode à la classe.
+			console.log('miam miam slurp slurp...');		####	
+		};													####
+	};														####
+	
+Chaque objet/classe a un prototype. Prototype = Objet, on peut lui ajouter des propriétés : Animal.prototype.sleep = function(){console.log('Zzzz...');
+Proto = Une seule fonction mais les objets peuvent pointer dessus.
+2 façons de construire des objets en JS:
+	- var objet = {	a:1,	b:2,	c:"lolilol, prototype:{...} };
+	- Définir un type (Animal) puis créer un objet de ce type.
+	
+Tous les objets ont une propriété cachée. (prototype)
+On peut mettre des attributs dans le prototype.
+
+Cat.prototype = new Animal(); => Equivalent de l'héritage.
+
+var garfield = new Cat();
+	garfield.speak();
+	garfield.sleep();
+	garfield.eat();
+	
+speak = fonction de Cat.
+sleep = fonction dans le prototype.
+eat   = fonction de Animal.
+
+
+
+Hoisting = Soulever un objet. Le levage.
+Pour faire une array : var tableau = []; OU var tableau2 = new Array();
+
+Fonction passée en argument = callback.
+
+app.use = Middleware.
+
+var app = angular.module('myApp', []); le []permet de créer le module. Si on l'enlève, on ne fait que appeler le module.
+
+On charge auto, puis "myApp" puis le module (Exemple 04).
+Transclude affiche le contenu de ce que contenait la directive.
