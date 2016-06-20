@@ -1,0 +1,22 @@
+{
+  "name": "exo",
+  "version": "0.0.1",
+  "description": "Formation AngularJS FAN Lyon du 20 Juin 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"postinstall": "bower install"
+  },
+  "keywords": [
+    "angular",
+    "pedagogie",
+    "formation",
+    "fan"
+  ],
+  "author": "Maxime PIRES",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "1.7.9",
+    "gulp": "3.9.1"
+  }
+}

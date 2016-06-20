@@ -1,0 +1,27 @@
+{
+  "name": "exo",
+  "description": "Formation AngularJS FAN Lyon du 20 Juin 2016",
+  "main": "index.js",
+  "authors": [
+    "Maxime PIRES"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "pedagogie",
+    "formation",
+    "fan"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.7"
+  }
+}
