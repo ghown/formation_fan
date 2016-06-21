@@ -4,6 +4,11 @@
 	angular.module('templates', []);
 
 	var app = angular.module('mainApp', ['templates','ors-star']);
+	
+	app.run(['$rootScope',function($rootScope){
+		console.log('Sbra',arguments);
+		$rootScope.myNote = 2;
+	}]);
 
 	app.directive('orsHeader', function() {
 		return {

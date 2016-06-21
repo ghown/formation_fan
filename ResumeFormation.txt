@@ -95,3 +95,5 @@ Pour "brancher" un module : <script target="app" src="ors-star/ors-star.js"></sc
 link: permet de lier une fonction à une directive.
 Penser à ajouter les modules dans app.js dans la var app. Sinon, la fonction n'est pas executée.
 Le nom du module doit être le même dans le fichier.js du module et dans le app.js
+
+Fonction injectable = Tableau.
