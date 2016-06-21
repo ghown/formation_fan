@@ -97,7 +97,11 @@ gulp.task('html', function() {
 	return gulp.src(html)
 		.pipe($.htmlReplace({
 			js: ['vendors.min.js', 'app.min.js', 'templates.js'],
-			css: ['css/vendors.min.css', 'css/style.min.css']
+			css: ['css/vendors.min.css', 'css/style.min.css'],
+			base: {
+				src: '/dist/',
+				tpl: '<base href="%s"/>'
+		  }
 		}))
 		.pipe(gulp.dest(dist));
 });

@@ -14,12 +14,12 @@
 				scope.update = function(note) {
 					console.log('update', arguments);
 					scope.n = note;
-				}
+				};
 				scope.$watch('n', function() {
 					var note = Number(scope.n);
 					note = (isNaN(note)) ? 3 : note;
-					note = note > 5 ? 5 : note;
-					note = note < 0 ? 0 : note;
+					note = (note > 5) ? 5 : note;
+					note = (note < 0) ? 0 : note;
 					var html = '';
 					for (var i = 0; i < note; i++) {
 						html += '<img ng-click="update(' + (i + 1) + ')" src="ors-star/img/yellow_star.png" />';
