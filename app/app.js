@@ -3,7 +3,7 @@
 
 	angular.module('templates', []);
 
-	var app = angular.module('mainApp', ['templates']);
+	var app = angular.module('mainApp', ['templates','ors-star']);
 
 	app.directive('orsHeader', function() {
 		return {

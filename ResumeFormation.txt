@@ -73,3 +73,24 @@ Transclude affiche le contenu de ce que contenait la directive.
 Façon attribut
 Façon élément
 Façon classe
+
+A la fin d'un index.html il va dans angular.init et il compile.
+
+Pour éviter un fouc : 
+	- Mettre le script en haut puis rajouter ng-cloak dans le body
+	OU
+	- Garder le script en bas et rajouter un ficheir css contenant les ng-cloak (angular-csp.css de bower_components/angular/)
+	
+Après la compilation, angular enlève les ng-cloak qu'il a trouvé dans le code.
+
+Fonction injectale : Fonction qui est déclarée dans un tableau
+
+Variable en $$ = Variable angular, ne pas toucher.
+
+Pour les form, setPristine => Remet form à l'état d'origine
+Dès qu'on créé un controleur, on crée un scope avec lui.
+Le rootscope est crée lors du ng-app.
+
+Pour "brancher" un module : <script target="app" src="ors-star/ors-star.js"></script>
+link: permet de lier une fonction à une directive.
+Penser à ajouter les modules dans app.js dans la var app. Sinon, la fonction n'est pas executée.
