@@ -6,11 +6,13 @@
 	app.directive('orsStar', function() {
 		return {
 			restrict: 'AEC',
+			scope: {
+				n: '=note'
+			},
 			link: function(scope, element, attrs) {
 				console.log('orsStar', arguments);
-				scope.$watch(attrs.note, function() {
-					var note = Number(attrs.note);
-					note = (isNaN(note)) ? Number(scope[attrs.note]) : note;
+				scope.$watch('n', function() {
+					var note = Number(scope.n);
 					note = (isNaN(note)) ? 3 : note;
 					note = note > 5 ? 5 : note;
 					note = note < 0 ? 0 : note;

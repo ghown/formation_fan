@@ -97,3 +97,8 @@ Penser à ajouter les modules dans app.js dans la var app. Sinon, la fonction n'e
 Le nom du module doit être le même dans le fichier.js du module et dans le app.js
 
 Fonction injectable = Tableau.
+
+Créer un scope dans la directive (scope isolé) permet d'accéder facilement aux variables et de ne pas pourrir le rootScope
+
+They watch me wip, they watch me nae nae, they watch me wip, wip, watch me nae nae!
+Ouh! Watch me, watch me! Ouh! Watch me, watch me! Ouh! Watch me, watch me. Ouh! Ouh! Ouh! Ouh!
