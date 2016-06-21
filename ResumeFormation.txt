@@ -22,7 +22,7 @@ Spécifications officiels js : ECMA script.
 
 Javascript : Une ligne ne peut pas mettre plus d'un certain temps à s'éxecuter (asynchrone).
 Pas de threads. (Apache décline en prod' car multithread). Remplacé par : jenkins, divise les coûts de production par 10.
-BOM = Brower object model. Console est un BOM. Taper this dans console de dév donne les commandes possibles.
+BOM = Brower object model. Console est un BOM. Taper this dans console de dév donne les commandes possibles. This est un BOM.
 
 === => Egale en type et en valeur. == => Egale en valeur.
 
@@ -59,6 +59,7 @@ eat   = fonction de Animal.
 
 Hoisting = Soulever un objet. Le levage.
 Pour faire une array : var tableau = []; OU var tableau2 = new Array();
+Un array a forcément un prototype de type Array
 
 Fonction passée en argument = callback.
 
@@ -104,3 +105,26 @@ They watch me wip, they watch me nae nae, they watch me wip, wip, watch me nae n
 Ouh! Watch me, watch me! Ouh! Watch me, watch me! Ouh! Watch me, watch me. Ouh! Ouh! Ouh! Ouh!
 
 Lorsque code html, il faut compiler le code avec $compile s'il utilise ng-blabla.
+
+Closure = Fonction qui fait appel à une ressource qui n'est pas un paramètre de la fonction. (Objet global par ex).
+En JS pas de différence entre entier et décimal.
+REST > SOAP
+Angular 1.2 => IE8, sinon supérieur.
+Service = $injectable
+Si on crée un service, pas le droit de mettre $.
+Variable touchée = Dirty
+Variable non touchée = pristine.
+Une variable qui passe en dirty est propagée => Dirty Checking.
+
+Service = Association clé/valeur.
+window = navigateur, $window = navigateur + node.
+
+/!\ Un fichier par module /!\
+On peut mettre autant de méthode/attribut que souhaité dans un service.
+Il est possible d'avoir plusieurs app.config/app.run... etc
+Config est prioritaire sur Run.
+SPA = Single page application
+Un service correspond toujours à un provider.
+Provider = nomServiceProvider.
+
+Je suis passe-partout, du fort Boyard!

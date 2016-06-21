@@ -3,10 +3,30 @@
 
 	angular.module('templates', []);
 
-	var app = angular.module('mainApp', ['templates','ors-star']);
-	
-	app.run(['$rootScope',function($rootScope){
-		console.log('Sbra',arguments);
+	var app = angular.module('mainApp', ['templates','ors-star','ngRoute']);
+
+	app.config(['$routeProvider', function($routeProvider) {
+
+		$routeProvider
+			.when('/', {
+				templateUrl: 'tmpl/menu/home.html'
+			})
+			.when('/products', {
+				templateUrl: 'tmpl/menu/products.html'
+			})
+			.when('/services', {
+				templateUrl: 'tmpl/menu/services.html'
+			})
+			.when('/contact', {
+				templateUrl: 'tmpl/menu/contact.html'
+			})
+			.otherwise({
+				redirectTo: '/'
+			});
+	}]);
+
+	app.run(['$rootScope',function($rootScope) {
+		console.log('Sbra', arguments);
 		$rootScope.myNote = 2;
 	}]);
 
