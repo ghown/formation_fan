@@ -102,3 +102,5 @@ Créer un scope dans la directive (scope isolé) permet d'accéder facilement aux v
 
 They watch me wip, they watch me nae nae, they watch me wip, wip, watch me nae nae!
 Ouh! Watch me, watch me! Ouh! Watch me, watch me! Ouh! Watch me, watch me. Ouh! Ouh! Ouh! Ouh!
+
+Lorsque code html, il faut compiler le code avec $compile s'il utilise ng-blabla.
