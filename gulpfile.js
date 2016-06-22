@@ -4,7 +4,7 @@ var runSequence = require('run-sequence');
 var del = require('del');
 var through = require('through2');
 var open = require('open');
-
+var Server = require('karma').Server;
 
 var getScripts = require('./gulp-get-scripts');
 
@@ -18,6 +18,13 @@ var fonts = ['bower_components/bootstrap/dist/fonts/*'];
 var data = ['app/**/*.json', 'app/**/*.csv'];
 var css = 'app/**/*.css';
 var js = 'app/**/*.js';
+
+gulp.task('test', function(done) {
+	new Server({
+		configFile: __dirname + '/karma.conf.js',
+		singleRun: true
+	}, done).start();
+});
 
 // Delete the dist directory
 gulp.task('clean', function() {
