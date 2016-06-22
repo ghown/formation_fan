@@ -141,3 +141,7 @@ JavaScript typé fort = TypeScript
 Fonction de hachage :
 Anti-colisible
 Homogène
+
+
+Test Unitaire : module par module.
+Pour utiliser un jeu de données => Fixture.
