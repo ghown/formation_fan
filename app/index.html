@@ -14,6 +14,10 @@
 		<!-- endbuild -->
 	</head>
 	<body ng-app="mainApp">
+		<span 
+			spinner-on="showSpinner"
+			us-spinner="{lines: 6, length: 37, width: 2, radius: 31, scale: 1.25, corners: 1, color: '#f00', opacity: 0.25, rotate: 90, direction: 1, speed: 0.8, trail: 60, fps: 20, zIndex: 2e9, className: 'spinner', top: '50%', left: '50%', shadow: false, hwaccel: false, position: 'absolute'}"
+		></span>
 		<div class="container-fluid">
 			<ors-header></ors-header>
 			<ors-body></ors-body>
@@ -28,6 +32,9 @@
 		<script target="app" src="app.js"></script>
 		<script target="app" src="ors-star/ors-star.js"></script>
 		<script target="app" src="ors-services/ors-services.js"></script>
+		<script target="app" src="ors-http/ors-http.js"></script>
+		<script target="vendors" src="../bower_components/spin.js/spin.js"></script>
+		<script target="vendors" src="../bower_components/angular-spinner/angular-spinner.js"></script>
 		<!-- endbuild -->
 	</body>
 </html>

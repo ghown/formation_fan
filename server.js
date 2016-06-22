@@ -5,6 +5,13 @@
 	var serveIndex = require('serve-index');
 
 	var app = express();
+	
+	app.use('/ws/', function(req, res, next) {
+		console.log('req.url', req.url);
+		setTimeout(function() {
+			next();
+		}, 2000);
+	});
 
 	app.use(express.static('.'));
 	app.use(serveIndex('.', {icons: true}));

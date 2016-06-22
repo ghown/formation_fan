@@ -3,7 +3,7 @@
 
 	angular.module('templates', []);
 
-	var app = angular.module('mainApp', ['templates','ors-star','ngRoute', 'ors-services']);
+	var app = angular.module('mainApp', ['templates','ors-star','ngRoute', 'ors-services', 'angularSpinner', 'ors-http']);
 
 	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
