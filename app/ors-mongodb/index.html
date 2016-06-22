@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Create in mongodb</title>
+		<link rel="stylesheet" href="/bc/angular/angular-csp.css">
+		<link rel="stylesheet" href="/bc/ng-dialog/css/ngDialog.min.css">
+		<link rel="stylesheet" href="/bc/ng-dialog/css/ngDialog-theme-default.min.css">
+	</head>
+
+	<body ng-app="myApp">
+		<div>
+			<h1>Create</h1>
+			name: <input ng-model="obj.name"/><br/>
+			age: <input ng-model="obj.age"/><br/>
+			<button ng-click="create()">create</button>
+			<span ng-cloak>{{createMessage}}</span>
+		</div>
+		<div>
+			<h1>Retrieve</h1>
+			filter: <input ng-change="retrieve()" ng-model="filter"/><br/>
+			<button ng-click="retrieve()">refresh</button>
+			<span ng-cloak>{{retrieveMessage}}</span><br/>
+			<button ng-disabled="!hasItemSelected()" ng-click="delete()">delete</button>
+			<span ng-cloak>{{deleteMessage}}</span><br/>
+			<table>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>name</th>
+					<th>age</th>
+				</tr>
+				<tr ng-repeat="record in result track by record._id">
+					<td><input class="item" ng-model="checked[record._id]" type="checkbox"/></td>
+					<td><button ng-click="open(record)">open</button></td>
+					<td>{{record.name}}</td>
+					<td>{{record.age}}</td>
+				</tr>
+			</table>
+			checked: {{checked}}
+		</div>	
+		<div>
+			<h1>Drop</h1>
+			<button ng-click="drop()">drop</button>
+			<span ng-cloak>{{dropMessage}}</span>
+		</div>
+		<script type="text/ng-template" id="popup.html">
+<div>
+	<h1>Update</h1>
+	name: <input ng-model="obj.name"/><br/>
+	age: <input ng-model="obj.age"/><br/>
+	<button ng-click="update()">update</button>
+	{{updateMessage}}
+</div>		
+		</script>
+		<script src="/bc/angular/angular.min.js"></script>
+		<script src="/bc/ng-dialog/js/ngDialog.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>

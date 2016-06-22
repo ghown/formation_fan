@@ -1,1 +1,24 @@
 Home
+
+<div>
+	<h1>Create</h1>
+	name: <input ng-model="obj.name"/><br/>
+	age: <input ng-model="obj.age"/><br/>
+	<button ng-click="create()">create</button>
+	<span ng-cloak>{{createMessage}}</span>
+	
+	<table>
+		<tr>
+			<th></th>
+			<th></th>
+			<th>name</th>
+			<th>age</th>
+		</tr>
+		<tr ng-repeat="record in result track by record._id">
+			<td><input class="item" ng-model="checked[record._id]" type="checkbox"/></td>
+			<td><button ng-click="open(record)">open</button></td>
+			<td>{{record.name}}</td>
+			<td>{{record.age}}</td>
+		</tr>
+	</table>
+</div>

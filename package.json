@@ -4,8 +4,8 @@
   "description": "Formation AngularJS FAN Lyon du 20 Juin 2016",
   "main": "index.js",
   "scripts": {
-	"update-webdriver": "webdriver-manager update",
-	"preprotractor": "npm run update-webdriver",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
     "protractor": "protractor test/protractor-conf.js",
     "postinstall": "bower install"
   },
@@ -21,6 +21,7 @@
     "bower": "1.7.9",
     "del": "2.2.0",
     "express": "4.14.0",
+    "express-session": "1.13.0",
     "gulp": "3.9.1",
     "gulp-angular-templatecache": "1.8.0",
     "gulp-cached": "1.1.0",
@@ -43,10 +44,14 @@
     "karma": "0.13.22",
     "karma-chrome-launcher": "1.0.1",
     "karma-jasmine": "1.0.2",
+    "mongodb": "2.1.18",
     "open": "0.0.5",
+    "protractor": "3.3.0",
     "run-sequence": "1.1.5",
     "serve-index": "1.8.0",
-    "through2": "2.0.1",
-	"protractor": "3.3.0"
+    "through2": "2.0.1"
+  },
+  "dependencies": {
+    "ng-dialog": "0.6.2"
   }
 }
