@@ -8,13 +8,21 @@
 
 	app.use(express.static('.'));
 	app.use(serveIndex('.', {icons: true}));
-
-	app.use(function(req, res, next) {
+	
+	app.use('/app/*', function(req, res, next) {
 		console.log('404: Page not Found', req.url);
 		next();
 	});
 
+	app.use(function(req, res, next) {
+		res.sendFile('./app/index.html', { root: __dirname });
+	});
+	
+	app.use(function(req, res, next) {
+		res.sendFile('./dist/index.html', { root: __dirname });
+	});
+
 	app.listen(666, function() {
-		console.log('server started on port 8000');
+		console.log('server started on port 666');
 	});
 })();

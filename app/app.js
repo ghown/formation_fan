@@ -3,7 +3,7 @@
 
 	angular.module('templates', []);
 
-	var app = angular.module('mainApp', ['templates','ors-star','ngRoute']);
+	var app = angular.module('mainApp', ['templates','ors-star','ngRoute', 'ors-services']);
 
 	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
@@ -19,7 +19,8 @@
 				templateUrl: 'tmpl/menu/products.html'
 			})
 			.when('/services', {
-				templateUrl: 'tmpl/menu/services.html'
+				templateUrl: 'tmpl/menu/services.html',
+				controller: 'ors-services.Ctrl'
 			})
 			.when('/contact', {
 				templateUrl: 'tmpl/menu/contact.html'
@@ -30,7 +31,7 @@
 	}]);
 
 	app.run(['$rootScope',function($rootScope) {
-		console.log('Sbra', arguments);
+		console.log('run', arguments);
 		$rootScope.myNote = 2;
 	}]);
 

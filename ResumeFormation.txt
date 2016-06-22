@@ -128,3 +128,16 @@ Un service correspond toujours à un provider.
 Provider = nomServiceProvider.
 
 Je suis passe-partout, du fort Boyard!
+
+3 recettes pour construire un service :
+	- Recette value
+	- Recette factory => Avantage sur value : Injection
+	- Recette provider
+	- Recette constante
+	- Recette service
+	
+JavaScript typé fort = TypeScript
+
+Fonction de hachage :
+Anti-colisible
+Homogène
