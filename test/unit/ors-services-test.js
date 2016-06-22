@@ -20,7 +20,7 @@
 				$scope = $rootScope.$new();
 				$controller('ors-services.Ctrl', {$scope: $scope});
 				
-				$http.when('GET', '../ws/releve.csv').respond(getJSONFixture('releve.csv'));
+				$http.when('GET', '../ws/releve.csv').respond(getJSONFixture('releve.json').content);
 			}]));
 				
 			it('should show correctly the csv file', function() {
