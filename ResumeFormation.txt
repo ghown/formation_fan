@@ -145,3 +145,5 @@ Homogène
 
 Test Unitaire : module par module.
 Pour utiliser un jeu de données => Fixture.
+
+Pour les tests : autohotkey

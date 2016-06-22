@@ -4,7 +4,9 @@
   "description": "Formation AngularJS FAN Lyon du 20 Juin 2016",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+	"update-webdriver": "webdriver-manager update",
+	"preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/protractor-conf.js",
     "postinstall": "bower install"
   },
   "keywords": [
@@ -44,6 +46,7 @@
     "open": "0.0.5",
     "run-sequence": "1.1.5",
     "serve-index": "1.8.0",
-    "through2": "2.0.1"
+    "through2": "2.0.1",
+	"protractor": "3.3.0"
   }
 }
