@@ -7,7 +7,10 @@
 		console.log('ctrl', arguments);
 		var $http = $injector.get('$http');
 		$http.get('../ws/releve.csv').then(function(response) {
-			$scope.releveCsv = response.data;
+			var data = Papa.parse(response.data, {
+				header: true
+			});
+			$scope.lines = data.data;
 		}).catch(function(error) {
 			console.error('error', error);
 		})
